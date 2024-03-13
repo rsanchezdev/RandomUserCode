@@ -15,4 +15,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "RandomUserCode"
 include(":app")
- 
+include(":domain")
+include(":data")
+include(":usecases")
