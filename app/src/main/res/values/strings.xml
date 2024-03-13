@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">RandomUserCode</string>
+    <string name="app_name">Random Users</string>
+    <string name="user_image">User image</string>
+    <string name="connectivity_error">Connectivity Error</string>
+    <string name="server_error">Server Error: %1$s</string>
+    <string name="unknown_error">Unknown Error: %1$s</string>
+    <string name="search_view_hint">Search…</string>
 </resources>
