@@ -5,7 +5,7 @@ import java.io.Serializable
 data class User(
     val gender: String,
     val name: UserName,
-    var location: UserLocation,
+    var location: UserLocation? = null,
     val email: String,
     val registered: UserRegistered,
     val phone: String,
