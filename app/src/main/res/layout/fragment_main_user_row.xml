@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.rsanchezdev.domain.dto.user.User" />
+
+        <variable
+            name="user"
+            type="User" />
+
+        <variable
+            name="userName"
+            type="String" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingVertical="8dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/siv_userImage"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"
+            app:shapeAppearanceOverlay="@style/circleImageView"
+            app:url="@{user.picture.large}"
+            tools:src="@drawable/ic_launcher_background"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_userName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/siv_userImage"
+            app:layout_constraintStart_toEndOf="@id/siv_userImage"
+            app:layout_constraintEnd_toStartOf="@id/iv_rowBtn"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:fontFamily="@font/sf_pro_text_medium"
+            android:text="@{userName}"
+            tools:text="Andrés Martinez"
+            android:includeFontPadding="false"
+            android:layout_marginTop="3dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="11dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_userEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_userName"
+            app:layout_constraintStart_toStartOf="@id/tv_userName"
+            app:layout_constraintEnd_toEndOf="@id/tv_userName"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/gray"
+            android:textSize="14sp"
+            android:fontFamily="@font/sf_pro_text_light"
+            tools:text="andres.mart@gmail.com"
+            android:text="@{user.email}"
+            android:includeFontPadding="false"/>
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_rowBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/siv_userImage"
+            app:layout_constraintBottom_toBottomOf="@id/siv_userImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/ic_user_row_arrow"
+            android:layout_marginEnd="8dp"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            app:layout_constraintTop_toBottomOf="@id/siv_userImage"
+            app:layout_constraintStart_toStartOf="@id/tv_userName"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
+            android:background="@color/lightGray"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
