@@ -2,10 +2,10 @@ package com.rsanchezdev.domain.dto.user
 
 data class User(
     val gender: String,
-    var userName: UserName,
-    var userLocation: UserLocation,
+    var name: UserName,
+    var location: UserLocation,
     val email: String,
-    var userRegistered: UserRegistered,
+    var registered: UserRegistered,
     val phone: String,
-    var userPicture: UserPicture
+    var picture: UserPicture
 )

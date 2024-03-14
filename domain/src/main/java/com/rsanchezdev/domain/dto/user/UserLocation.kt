@@ -1,11 +1,11 @@
 package com.rsanchezdev.domain.dto.user
 
 data class UserLocation(
-    var userStreet: UserStreet,
+    var street: UserStreet,
     val city: String,
     val state: String,
     val country: String,
     var postcode: Int,
-    var userCoordinates: UserCoordinates,
-    var userTimezone: UserTimezone
+    var coordinates: UserCoordinates,
+    var timezone: UserTimezone
 )
