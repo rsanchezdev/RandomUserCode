@@ -20,15 +20,15 @@ class UsersListAdapter(private val listener: (User) -> Unit) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val user = getItem(position)
-        holder.bind(user, listener(user))
+        holder.bind(user)
+        holder.itemView.setOnClickListener { listener(user) }
     }
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         private val binding = FragmentMainUserRowBinding.bind(view)
-        fun bind(user: User, listener: Unit) {
+        fun bind(user: User) {
             binding.user = user
             binding.userName = "${user.name.first} ${user.name.last}"
-            binding.ivRowBtn.setOnClickListener { listener }
         }
     }
 }

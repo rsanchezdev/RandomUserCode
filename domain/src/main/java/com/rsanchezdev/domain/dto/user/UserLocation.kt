@@ -1,11 +1,13 @@
 package com.rsanchezdev.domain.dto.user
 
+import java.io.Serializable
+
 data class UserLocation(
-    var street: UserStreet,
+    val street: UserStreet,
     val city: String,
     val state: String,
     val country: String,
-    var postcode: Int,
-    var coordinates: UserCoordinates,
-    var timezone: UserTimezone
-)
+    val postcode: Int,
+    val coordinates: UserCoordinates,
+    val timezone: UserTimezone
+): Serializable

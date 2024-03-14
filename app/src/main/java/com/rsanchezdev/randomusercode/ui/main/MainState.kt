@@ -18,8 +18,8 @@ class MainState(
     private val navController: NavController
 ) {
     fun onUserClicked(user: User) {
-/*        val action = MainFragmentDirections.actionMainToDetail(user)
-        navController.navigate(action)*/
+        val action = MainFragmentDirections.actionMainToDetail(user)
+        navController.navigate(action)
     }
 
     fun errorToString(error: Error) = when (error) {
