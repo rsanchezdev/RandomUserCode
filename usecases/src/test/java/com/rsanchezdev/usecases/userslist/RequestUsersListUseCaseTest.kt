@@ -8,7 +8,7 @@ import org.mockito.kotlin.verify
 
 class RequestUsersListUseCaseTest{
     @Test
-    fun `Invoke calls beers repository`(): Unit = runBlocking {
+    fun `Invoke calls users repository`(): Unit = runBlocking {
         val usersRepository = mock<UsersRepository>()
         val requestUsersListUseCase = RequestUsersListUseCase(usersRepository)
 

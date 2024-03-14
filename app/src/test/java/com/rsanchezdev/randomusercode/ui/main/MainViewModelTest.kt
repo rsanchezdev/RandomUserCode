@@ -32,7 +32,7 @@ class MainViewModelTest {
     private val requestedItems = RequestedItems(listOf(sampleUser))
 
     @Test
-    fun `Progress is shown when screen starts and hidden when it finishes requesting beers`() =
+    fun `Progress is shown when screen starts and hidden when it finishes requesting users`() =
         runTest {
             vm = buildViewModel()
             vm.onUiReady()
