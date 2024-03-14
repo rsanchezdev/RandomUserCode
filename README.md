@@ -25,6 +25,7 @@ Each layer has dedicated components and they have each different responsibilitie
 - Glide: Loading images from network.
 - JUnit & Mockito: for testing.
 
-
+## Screenshots
+<img src="https://github.com/rsanchezdev/RandomUserCode/assets/50987394/4a8bc677-cf60-4422-83f4-eea7207bf18b" alt="MainView" style="height: 30%; width:30%;"/>   <img src="https://github.com/rsanchezdev/RandomUserCode/assets/50987394/849e757b-740e-4c3d-9b85-25d653374bbe" alt="MainView Search" style="height: 30%; width:30%;"/>   <img src="https://github.com/rsanchezdev/RandomUserCode/assets/50987394/b59264fd-3f6b-4916-b2b7-605c3b605f68" alt="DetailView" style="height: 30%; width:30%;"/>
 
 
