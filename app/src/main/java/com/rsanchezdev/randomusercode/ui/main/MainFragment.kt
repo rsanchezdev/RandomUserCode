@@ -10,7 +10,6 @@ import com.rsanchezdev.randomusercode.data.launchAndCollect
 import com.rsanchezdev.randomusercode.databinding.FragmentMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 
-
 @AndroidEntryPoint
 class MainFragment : Fragment(R.layout.fragment_main) {
 
@@ -24,6 +23,8 @@ class MainFragment : Fragment(R.layout.fragment_main) {
     private val binding get() = _binding
 
     private lateinit var searchView: SearchView
+
+    private var viewCreated = false
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -42,7 +43,10 @@ class MainFragment : Fragment(R.layout.fragment_main) {
             binding.error = it.requestedItems.error?.let(mainState::errorToString)
         }
 
-        viewModel.onUiReady()
+        if (!viewCreated){
+            viewCreated = true
+            viewModel.onUiReady()
+        }
     }
 
     private fun configureSearchView(){

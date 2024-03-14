@@ -6,4 +6,11 @@
     <string name="unknown_error">Unknown Error: %1$s</string>
     <string name="search_view_hint">Search…</string>
     <string name="toolbar_main_title">CONTACTOS</string>
+    <string name="detail_user_name">Nombre y apellidos</string>
+    <string name="detail_email">Email</string>
+    <string name="detail_gender">Género</string>
+    <string name="detail_register_date">Fecha de registro</string>
+    <string name="detail_phone">Teléfono</string>
+    <string name="gender_male">Hombre</string>
+    <string name="gender_female">Mujer</string>
 </resources>

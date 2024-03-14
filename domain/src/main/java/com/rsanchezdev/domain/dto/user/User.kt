@@ -1,11 +1,13 @@
 package com.rsanchezdev.domain.dto.user
 
+import java.io.Serializable
+
 data class User(
     val gender: String,
-    var name: UserName,
+    val name: UserName,
     var location: UserLocation,
     val email: String,
-    var registered: UserRegistered,
+    val registered: UserRegistered,
     val phone: String,
-    var picture: UserPicture
-)
+    val picture: UserPicture
+): Serializable
